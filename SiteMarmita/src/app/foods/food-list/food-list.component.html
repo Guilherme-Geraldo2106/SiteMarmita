@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mb-2">
     <div class="col-12">
         <button class="btn btn-success">
             Nova marmita
@@ -6,7 +6,16 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-12">
-        <app-food-item></app-food-item>
+    <div  class="col-12" >
+        <a href="#" class="list-group-item clearfix mb-2" *ngFor="let food of foods">
+            <div class="float-start">
+                <h4 class="list-group-item-heading">{{food.name}}</h4>
+                <p class="list-group-item-text">{{food.description}}</p>
+            </div>
+            <div class="float-end">
+                <img src="{{food.imagePath}}" alt="" class="img-responsive" style="max-height: 100px;">
+            </div>
+        </a>
+        <!-- <app-food-item></app-food-item> -->
     </div>
 </div>
